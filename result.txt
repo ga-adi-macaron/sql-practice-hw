@@ -17,7 +17,7 @@ Q: Find all of the customers whose CustomerName's start with a B and ends with a
 A: SELECT customername FROM Customers WHERE customername LIKE 'B%S'
 
 Q: Find all customers who have a postal code with exactly 4 digits.
-A: SELECT customername FROM Customers WHERE postalcode <10000;
+SELECT customername,postalcode FROM Customers WHERE LENGTH(postalcode)=4;
 
 Q: Delete all customers whose ContactNames start with an M
 A: DELETE FROM customers WHERE contactname LIKE 'M%';
