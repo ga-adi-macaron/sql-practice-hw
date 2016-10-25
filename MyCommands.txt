@@ -1,0 +1,19 @@
+SELECT CustomerName FROM Customers WHERE City = 'London';
+
+SELECT CustomerName FROM Customers WHERE PostalCode LIKE '%0%';
+
+SELECT city FROM Customers WHERE Country = 'France';
+
+UPDATE Customers SET City = 'London' WHERE Country = 'UK';
+
+SELECT CustomerName,ContactName FROM Customers WHERE Country = 'USA' OR Country = 'Canada';
+
+SELECT * FROM Customers WHERE CustomerName LIKE 'B%s';
+
+SELECT * FROM Customers WHERE PostalCode LIKE '____';
+
+DELETE FROM Customers WHERE ContactName LIKE 'M%';
+
+INSERT INTO Customers VALUES (110,'Best Bagels','John Smith','234 Example St.','Anytown',12345,'USA');
+
+DELETE FROM Customers WHERE CustomerName LIKE 'A%' OR ContactName LIKE 'L%';
