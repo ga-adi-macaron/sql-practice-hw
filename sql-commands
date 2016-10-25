@@ -1,0 +1,29 @@
+All names of the customers who are from London
+SELECT * FROM [Customers] WHERE City = 'London';
+
+All names of the customers who have a 0 in their postal code
+SELECT * FROM [Customers] WHERE PostalCode LIKE '%0%';
+
+All of the city names that are in France
+SELECT City FROM [Customers] WHERE Country = 'France';
+
+Update all of cities in the UK to be London
+UPDATE [Customers] SET City = 'London' WHERE Country = 'UK';
+
+Customer Names and Contact Names for customers who are in North America
+SELECT CustomerName, ContactName FROM [Customers] WHERE Country = 'Canada' OR Country = 'USA' OR Country = 'Mexico';
+
+All of the customers whose CustomerName’s start with a B and ends with an s
+SELECT * FROM [Customers] WHERE CustomerName LIKE 'B%' AND CustomerName LIKE '%s';
+
+All customers who have a postal code with exactly 4 digits
+SELECT * FROM [Customers] WHERE PostalCode < 10000
+
+Delete all customers whose ContactNames Start with an M
+DELETE FROM [Customers] WHERE ContactName Like 'M%';
+
+Add the following information to the table:
+INSERT INTO [Customers] VALUES (110, ‘Best Bagels’, ‘John Smith’, ‘234 Example St.’, ‘Anytown’, 12345, ‘USA’);
+
+Delete all Customers whose CustomerNames start with an A, or whose ContactNames start with an L
+DELETE FROM [Customers] WHERE CustomerName LIKE 'A%' OR CustomerName LIKE 'L%';
