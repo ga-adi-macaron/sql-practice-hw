@@ -17,7 +17,14 @@
 	SELECT CustomerName FROM Customers WHERE CustomerName LIKE 'B%' and CustomerName LIKE '%s';
 
 7.) Customers with a 4-digit postal code:
-
+	SELECT CustomerName, PostalCode FROM Customers WHERE Length(PostalCode) = 4;
 
 8.) Delete customers with names beginning with 'M':
 	DELETE FROM Customers WHERE CustomerName LIKE 'M%';
+
+9.) Add ID 110:
+	INSERT INTO Customers VALUES(110,'Best Bagels','John Smith','234 Example St.','Anytown',12345,'USA');
+
+
+10.) Delete customer names that start with 'A' or 'L':
+	DELETE FROM Customers WHERE CustomerName LIKE "A%" OR CustomerName LIKE "L%";
