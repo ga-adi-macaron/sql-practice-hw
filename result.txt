@@ -1,0 +1,37 @@
+Q: Find all of the names of the customers who are from London.
+A: SELECT customername FROM Customers WHERE city LIKE 'London';
+
+Q: Find all of the names of the customers who have a 0 in their postal code
+A: SELECT customername FROM Customers WHERE postalcode LIKE '%0%';
+
+Q: Find all of the city names that are in France
+A: SELECT city FROM Customers WHERE country LIKE 'France';
+
+Q: Update all of the cities in the UK to be London
+A: UPDATE customers SET city = 'London' WHERE country LIKE 'UK';
+
+Q: Find the Customer Names and Contact Names for customers who are in North America
+A: SELECT customername, contactname FROM customers WHERE country LIKE 'USA' OR country LIKE 'Canada' OR country LIKE 'Mexico';
+
+Q: Find all of the customers whose CustomerName's start with a B and ends with an s.
+A: SELECT customername FROM Customers WHERE customername LIKE 'B%S'
+
+Q: Find all customers who have a postal code with exactly 4 digits.
+SELECT customername,postalcode FROM Customers WHERE LENGTH(postalcode)=4;
+
+Q: Delete all customers whose ContactNames start with an M
+A: DELETE FROM customers WHERE contactname LIKE 'M%';
+
+Q: Add the following information to the table:
+id: 110
+CustomerName: Best Bagels
+ContactName: John Smith
+Address: 234 Example St.
+City: Anytown
+PostalCode: 12345
+Country: USA
+
+A: INSERT INTO customers VALUES (110, 'Best Bagels','John Smith','234 Example St.','Anytown','12345','USA');
+
+Q: Delete all Customers whose CustomerNames start with an A, or whose ContactNames start with an L
+A: DELETE FROM customers WHERE customername LIKE 'A%' OR contactname LIKE 'L%'
