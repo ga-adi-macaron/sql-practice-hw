@@ -1,0 +1,8 @@
+1.SELECT CustomerName FROM Customers WHERE City = “London”
+2.SELECT CustomerName FROM Customers WHERE PostalCode = “%0%”
+3.SELECT City FROM Customers WHERE Country = “France”
+4.UPDATE Customers SET City = “London” WHERE Country = “UK”
+5.SELECT CustomerName, ContactName FROM Customers WHERE Country = “USA”
+6.SELECT CustomerName FROM Customers WHERE CustomerName = “B%” AND CustomerName = “%S”
+7.DELETE FROM Customers WHERE ContactName = “M%”
+8.INSERT INTO Customers VALUES (110,Best Bagels, John Smith, 234 Example St., Anytown, 12345, USA)
